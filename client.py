@@ -17,7 +17,7 @@ SESSION_FILE = "session.json"
 # =====================================================================
 # SESSION PERSISTENCE HELPERS (AUTO-LOGIN)
 # =====================================================================
-def save_session(phone, password, auto_login=True):
+def save_session(phone, password, auto_login=False):
     if auto_login:
         with open(SESSION_FILE, "w") as f:
             json.dump({"phone": phone, "password": password, "auto_login": True}, f)
